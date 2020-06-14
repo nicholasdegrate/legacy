@@ -1,9 +1,6 @@
 //  defualt settings
 @import 'partials/config';
 
-// glider
-@import "../node_modules/@glidejs/glide/src/assets/sass/glide.core";
-
 * {
     margin: 0;
     padding: 0;
@@ -49,31 +46,7 @@ button {
 main {
     min-height: calc(80vh - 211px - 58px);
 }
-// slider instrustion
-.glide__slide {
-    transition:  .3s linear;
-    transform: scale(.9);
-}
-.glide__slide--active {
-    opacity: 1;
-    filter: none;
-    transform:  scale(1);
-}
-.glide__slides {
-    overflow: visible;
-}
 
-.glide__arrows {
-   display: flex;
-   justify-content: center;
-   margin: 3em auto;
-}
-.glide__arrow {
-    background: none;
-    height: 3em;
-    width: 100px;
-    margin: 0 1em;
-}
 
 // properties listing
 #main-property-wrapper {
