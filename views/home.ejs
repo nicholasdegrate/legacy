@@ -9,44 +9,45 @@
 <main>
 
     <div id="main-property-wrapper">
-        <div class="glide" style='overflow: hidden;'>
-            <div class="glide__track" data-glide-el="track">
-            <ul class="glide__slides">
-                <% properties.forEach(property => { %>
-                    <li class="glide__slide">
-                        <div id="properties-section">
-                            <h2 id="properties-section-title">Properties</h2>
-                            <div id="property-listing">
-                                <img class='property-listing-img' src="img/prop.jpg" alt="living Room">
-                                <div class="property-listing-content">
-                                    <p class="price">$<%= property.price%><span class='price-discription'>FOR SALE</span></p>
-                                    <ul id="properties-detail">
-                                        <div>
-                                            <il><img class='house-icon' src="img/home-run.png" alt="house"></il>
-                                            <il class="bedInfo"><span><%= property.bed%></span>Beds</il>
-                                            <il class="bathInfo"><span><%= property.bath%></span>Baths</il>
-                                        </div>
-                                        <il class='square-feet'><%= property.footage%><span>ft<sup>2</sup></span></il>
-                                    </ul>
-                                    <ul class='btn-container'>
-                                        <li><button><a href='#contact-section'>Contact</a></button></li>
-                                        <li><button><a href="/properties">More</a></button></li>
-                                    </ul>
+        <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <h2 id="properties-section-title">Properties</h2>
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                    <% properties.forEach(property => { %>
+                        <div class="swiper-slide">
+                            <div id="properties-section">
+                                <div id="property-listing">
+                                    <img class='property-listing-img' src="img/prop.jpg" alt="living Room">
+                                    <div class="property-listing-content">
+                                        <p class="price">$<%= property.price%><span class='price-discription'>FOR SALE</span></p>
+                                        <ul id="properties-detail">
+                                            <div>
+                                                <il><img class='house-icon' src="img/home-run.png" alt="house"></il>
+                                                <il class="bedInfo"><span><%= property.bed%></span>Beds</il>
+                                                <il class="bathInfo"><span><%= property.bath%></span>Baths</il>
+                                            </div>
+                                            <il class='square-feet'><%= property.footage%><span>ft<sup>2</sup></span></il>
+                                        </ul>
+                                        <ul class='btn-container'>
+                                            <li><button><a href='#contact-section'>Contact</a></button></li>
+                                            <li><button><a href="/properties">More</a></button></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </li>
-               <% }); %>
-            </ul>
+                   <% }); %>
             </div>
-
-            <div class="glide__arrows" data-glide-el="controls">
-                <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
-                <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
-            </div>
+        
+            <!-- If we need navigation buttons -->
+        </div>
+        <div id='swiper-nav-btn'>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
     </div>
-
+    <!-- ! end of main-property-wrapper -->
     <div id="about-section">
         <h2>About</h2>
         <p>Hello, we are Monica and Shawn, and we are on a mission to reach out and help as many distressed homeowners as possible. Over the years, we have become experts on educating and assisting homeowners through their foreclosure process. With all the constant changes from day to day occurring in the banking industry, you, the Homeowner, need someone you can trust to offer you open and honest advice to aid you in making the right decision at such a life-altering moment. The best part about our mission is our advice is 100% free to you as the homeowner. If you have any questions about your current situation and would like to speak with a local expert for friendly advice, please give us a call right away!</p>

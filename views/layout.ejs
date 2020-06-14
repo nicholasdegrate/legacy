@@ -8,6 +8,9 @@
     <meta name = "description" content = "real estate company">
     <meta name = "author" content = "Nicholas D.">
     <link rel="stylesheet" href="../../default.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="path/to/swiper.min.css">
     <title>Legacy Rebuild Properties</title>
 </head>
 <body>
@@ -17,5 +20,54 @@
     </div>
     <%- include('partials/modal.ejs') %>
     <script defer src="/js/properties.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="path/to/swiper.min.js"></script>
+    <script>
+        const mySwiper = new Swiper ('.swiper-container', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        freeMode: true,
+        keyboardControl: false,
+        centeredSlides: true,
+        updateOnWindowResize: true,
+        setWrapperSize: true,
+        observer: true, 
+        observeParents: true,
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 5
+            },
+            // when window width is >= 480px
+            480: {
+                slidesPerView: 1,
+                spaceBetween: 5
+            },
+            // when window width is >= 1000px
+            750: {
+                slidesPerView: 2,
+                spaceBetween: 5
+            },
+            // when window width is >= 1000px
+            1000: {
+                slidesPerView: 3,
+                spaceBetween: 5
+            }
+        },
+       
+        // Navigation arrows
+        navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+        },
+
+        });
+        mySwiper.update();
+        mySwiper.updateSize();
+    </script>
 </body>
 </html>

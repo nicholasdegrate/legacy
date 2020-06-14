@@ -1,0 +1,27 @@
+######### PROBLEM ONE ######### 
+        
+        optimalzing the website
+
+######### PROBLEM TWO ######### 
+        
+        figuring out where to store images for inputs
+
+######### PROBLEM THREE ######### 
+        
+        !!!!! FIXING PRODUCTION ISSUE !!!!!
+
+######### PROBLEM FOURTH ######### 
+        
+        !!!!! Fixing deployment code to make it production !!!!!
+
+
+######### PROBLEM FOURTH ######### 
+
+    $CURRENTLY WORKING ON
+        
+        slidejs does not working on chrome
+
+        %: currently swiper.js is working on all browser; however, 
+            safari is not working correctly
+
+        @: problem is fixed
