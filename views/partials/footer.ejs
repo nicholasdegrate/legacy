@@ -1,0 +1,41 @@
+<footer id="main-footer">
+    <div id="footer-container">
+        <div id='company-name-footer'>
+            <h1>Legacy Rebuild Properties</h1>
+        </div>
+        <div class='nav-footer'>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/properties">Properties</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/partners">Partners</a></li>
+            </ul>
+        </div>
+        <div class='address-footer'>
+            <ul >
+                <li>Fort Worth, Texas 76177 United States</li>
+                <li>(817) 888-8285</li>
+            </ul>
+        </div>
+        <div class='copyright'>
+            <p>Copyright © 2020 Legacy Rebuild Properties, LLC - All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+<script src="/js/script.js"></script>
+<script>
+    new Glide('.glide', {
+        type: 'carousel',
+        focusAt: 'center',
+        perView : 3,
+        breakpoints : {
+            750 : {perView: 1},
+            1000 : {perView : 2}
+        }
+    }).mount();
+</script>
+</body>
+</html>

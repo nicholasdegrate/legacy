@@ -1,0 +1,36 @@
+<div id="dashboard">
+
+    <div id="dashboard-header">
+        <h1>Dashboard</h1>
+        <p>Welcome <%= user.name %></p>
+        <a href="/users/logout" id='logout'>Logout</a>
+    </div>
+    <div id='main-dashboard'>
+        <div id="dashboard-nav">
+            <ul>
+                <li><a href="/welcome/dashboard">Blog</a></li>
+                <li><a href="/welcome/dashboard/ps">Properties</a></li>
+                <li><a href="/welcome/dashboard/propimages">properties Images</a></li>
+            </ul>
+        </div>
+        <div id="dashboard-inputs">
+            <h1>Blog</h1>
+            <form action="/blog" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" name="blogTitle" id="title">
+                </div>
+                <div class="form-group">
+                    <label for="author">Author</label>
+                       <input type="text" name="blogAuthor" id="author">
+                </div>
+                <div class="form-group blogArea">
+                    <label for="Text">Text</label>
+                    <textarea name="blogText" id="" cols="30" rows="10"></textarea>
+                </div>
+                    <button type="submit" value='submit' id='publish-btn'>Publish</button>
+            </form>
+        </div>
+    </div>
+
+</div>

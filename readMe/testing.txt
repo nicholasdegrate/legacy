@@ -1,0 +1,25 @@
+<% properties.forEach(property => { %>
+                    <li class="glide__slide">
+                        <div id="properties-section">
+                            <h2 id="properties-section-title">Properties</h2>
+                            <div id="property-listing">
+                                <img class='property-listing-img' src="img/prop.jpg" alt="living Room">
+                                <div class="property-listing-content">
+                                    <p class="price">$<%= property.price%><span class='price-discription'>FOR SALE</span></p>
+                                    <ul id="properties-detail">
+                                        <div>
+                                            <il><img class='house-icon' src="img/home-run.png" alt="house"></il>
+                                            <il class="bedInfo"><span><%= property.bed%></span>Beds</il>
+                                            <il class="bathInfo"><span><%= property.bath%></span>Baths</il>
+                                        </div>
+                                        <il class='square-feet'><%= property.footage%><span>ft<sup>2</sup></span></il>
+                                    </ul>
+                                    <ul class='btn-container'>
+                                        <li><button><a href='#contact-section'>Contact</a></button></li>
+                                        <li><button><a href="/properties">More</a></button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+               <% }); %>

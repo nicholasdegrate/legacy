@@ -1,0 +1,109 @@
+<div id="wrapper-for-all-properties">
+    <% let arr = []; %>
+    <% let i = 0; %>
+    <!-- ! stores the index length into the array -->
+    <% while(i < properties.length) { %>
+        <% arr.push(i); %>
+        <% i++; %>
+    <% } %>
+    <div id="properties-list">
+        <h3>Properties</h3>
+        <% for(let i = 0;i < arr.length; i++) { %>
+            <!-- changes the index value of object -->
+        <div class='product' id='<%=`product${arr[i]}`%>'>
+            <% properties.forEach(property => { %>
+                <!-- check if the index matches to input info -->
+                <% if (properties.indexOf(property) == arr[i]) { %>
+                    <div class="properties-list-container">
+                            <div class="properties-list-img">
+                                <img src="img/prop.jpg">
+                            </div>
+                            <div class="properties-list-content">
+                                <ul>
+                                    <div>
+                                        <li><p class="price">$ <%= property.price %><span class='price-discription'>FOR SALE</span></p></li>
+                                        <il class="bedInfo"><span><%= property.bed %> </span>Beds</il>
+                                        <il class="bathInfo"><span><%= property.bath %> </span>Baths</il>
+                                        <il class='square-feet'><%= property.footage %> <span>ft<sup>2</sup></span></il>
+                                    </div>
+                                    <div>
+                                        <li class='p-content-btn'><button>Contact</button></li>
+                                    </div>
+                                </ul>
+                            </div>
+                    </div>
+                <% } %>
+            <% }); %>
+        </div>
+    <% } %>
+    </div>
+
+    <div class="infos">
+    
+    <!-- * add a index on the end of id to change object -->
+    <% for(let i = 0;i < arr.length; i++) { %>
+            <div class='info propertiesInfo' id='<%=`info-product${arr[i]}` %>'>
+            <% properties.forEach(property => { %>
+                <!-- checks the index to see if it matches -->
+                <% if (properties.indexOf(property) == arr[i]) { %>
+                    <div class="p-info-right">
+                            <div class="extra-imgs">
+                                    <div class='extra-img'>
+                                        <img src="img/prop.jpg" alt="">
+                                    </div>
+                                    <div class='extra-img'>
+                                        <img src="img/prop.jpg" alt="">
+                                    </div>
+                                    <div class='extra-img'>
+                                        <img src="img/prop.jpg" alt="">
+                                    </div>
+                                    <div class='extra-img'>
+                                        <img src="img/prop.jpg" alt="">
+                                    </div>
+                                    <div class='extra-img'>
+                                        <img src="img/prop.jpg" alt="">
+                                    </div>
+                            </div>
+                            <div class="current-img">
+                               
+                                <img src="img/prop.jpg" alt="">
+                            </div>
+                    </div>
+                    <div class="p-info-left">
+                        <ul>
+                                <li class='info-left-address'><h4><%= property.location %></h4></li>
+                                <div class='center-info-left'>
+                                    <li><p class="price">$<%= property.price %><span class='price-discription'>FOR SALE</span></p></li>
+                                    <div class='inside-house-info'>
+                                        <div>
+                                            <il><img class='house-icon' src="img/home-run.png" alt="house"></il>
+                                            <il class="bedInfo"><span><%= property.bed %></span>Beds</il>
+                                            <il class="bathInfo"><span><%= property.bath %></span>Baths</il>
+                                        </div>
+                                        <il class='square-feet'><%= property.footage %><span>ft<sup>2</sup></span></il>
+                                    </div>
+                                </div>
+                                <div class='send-message-btn'>
+                                    <li><button class='send-message'>Send Message</button></li>
+                                </div>
+                            </ul>
+                    </div>
+                    <div class="p-info-bottom">
+                            <div class="p-info-bottom-list">
+                                <ul>
+                                    <li><%= property.listingItem %></li>
+                                </ul>
+                            </div>
+                            <div class="p-info-bottom-about-listing">
+                                <h3>About Listing</h3>
+                                <p><%= property.aboutListing %></p>
+                            </div>
+                    </div>
+                <% } %>
+            <% }); %>
+            <!-- ! end of properties for loop -->
+        </div>
+        <!-- ! end of propertiesInfo div -->
+    <% } %>
+    </div>
+</div>

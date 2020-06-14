@@ -1,0 +1,56 @@
+<div id="dashboard">
+
+    <div id="dashboard-header">
+        <h1>Dashboard</h1>
+        <p>Welcome <%= user.name %></p>
+        <a href="/users/logout" id='logout'>Logout</a>
+    </div>
+    <div id='main-dashboard'>
+        <div id="dashboard-nav">
+            <ul>
+                <li><a href="/welcome/dashboard">Blog</a></li>
+                <li><a href="/welcome/dashboard/ps">Properties</a></li>
+                <li><a href="/welcome/dashboard/propimages">properties Images</a></li>
+            </ul>
+        </div>
+        <div id="dashboard-inputs">
+            <h1>Properties</h1>
+            <form action="/properties" method="POST" enctype="multipart/form-data">
+                <div>
+                    <div class="form-group">
+                        <label for="Location">Location</label>
+                        <input type="text" name="location" id="location">
+                    </div>
+                    <div class="form-group">
+                            <label for="price">Price</label>
+                           <input type="text" name="price" id="price">
+                    </div>
+                    <div class="form-group">
+                            <label for="bed">Bed</label>
+                           <input type="text" name="bed" id="bed">
+                    </div>
+                    <div class="form-group">
+                            <label for="bath">bath</label>
+                           <input type="text" name="bath" id="bath">
+                    </div>
+                    <div class="form-group">
+                            <label for="Square">Square footage</label>
+                           <input type="text" name="square" id="square">
+                    </div>
+                </div>
+               <div>
+                   <div class="form-group">
+                       <label for="listing">listing Items</label>
+                          <input type="text" name="listingItem" id="listing">
+                   </div>
+                   <div class="form-group blogArea">
+                        <label for="listingAbout">About listing</label>
+                        <textarea name="aboutListing" id="" cols="30" rows="10"></textarea>
+                    </div>
+               </div>
+                    <button type="submit" value='submit' id='publish-btn'>Publish</button>
+            </form>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,248 @@
+#wrapper-for-all-properties {
+    display: grid;
+    height: calc(100vh - 50px);
+    width: 100%;
+    max-width: 1450px;
+    margin: auto;
+    overflow: hidden;
+
+    #properties-list {
+        overflow: scroll;
+        margin-top: 3em;
+
+        h3 {
+            text-align: center;
+            margin-bottom: 1em;
+        }
+    }
+    .properties-list-container {
+        max-height: 250px;
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 1em;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr;
+        cursor: pointer;
+
+        .properties-list-img {
+            height: 100%;
+            max-width: 300px;
+            width: 100%;
+
+            img {
+                object-fit: cover;
+                border-radius: 10px;
+            }
+        }
+        .properties-list-content {
+            max-width: 400px;
+            padding: 1em;
+            justify-self: center;
+            align-self: center;
+
+            .p-content-btn {
+                margin-top: 3em;
+            }
+            .price {
+                font-weight: bold;
+                font-size: 130%;
+                margin-bottom: .3em;
+            }
+            .price-discription {
+                margin-left: .5em;
+                font-size: .7em;
+            }
+        }
+    }
+
+
+
+}
+.propertiesInfo {
+    display: none;
+}
+.hidden{
+    display: none !important;
+}
+@media screen and (min-width: screen(tablet)) {
+    .house-icon,.bedInfo, .bathInfo {
+        align-self: center;
+        margin-right: 1.5px;
+        white-space: nowrap;
+    }
+    .house-icon {
+        display: none;
+    }
+}
+@media screen and (min-width: screen(desktop)) {
+    #wrapper-for-all-properties {
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr;
+        padding: 2em;
+        .properties-list-container {
+            padding:  0;
+            margin: 1em;
+            .p-content-btn {
+                display: none;
+            }
+            .properties-list-content {
+                padding: .5em;
+                .p-content-btn {
+                    margin-top: 3em;
+                }
+                .price {
+                    font-size: 120%;
+                }
+                .price-discription {
+                    font-size: .5em;
+                }
+            }
+
+        }
+        .propertiesInfo {
+            display:grid;
+            grid-row: 1/2;
+            grid-column:  2/3;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            padding-top: 3em;
+
+            .p-info-left{
+                width: 90%;
+                height: 100%;
+                padding: 1em;
+
+                ul {
+                    height: 100%;
+                    display: grid;
+                    grid-template-rows: 1fr 1fr 1fr;
+
+                    .info-left-address {
+
+                        align-self: center;
+                        h4 {
+                            font-size: 1.5em;
+                        }
+                    }
+                    .center-info-left {
+                        align-self: start;
+                        .price {
+                            font-weight: bold;
+                            font-size: 1.2em;
+                            .price-discription {
+                                margin-left: .5em;
+                                font-size: .7em;
+                                font-weight: 200;
+                            }
+                        }
+
+                    }
+
+
+                    .inside-house-info {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-around;
+                        margin-top: 1em;
+                        .bedInfo span, .bathInfo, span {
+                            align-self: center;
+                        }
+                        .square-feet {
+                             margin-top: .3em;
+                        }
+                        .house-icon {
+                            display: inline-block;
+                            height: 20px;
+                            width: 20px;
+                            object-fit: cover;
+                        }
+                    }
+                    .send-message-btn {
+                        align-self: start;
+                    }
+                    .send-message {
+                        width: 100%;
+                        margin: auto;
+                        border-radius: 50px;
+                        background-color:color(accentTwo);
+                        color: color(white);
+                        border: 1px solid color(accentTwo);
+
+                        &:hover {
+                            background: none;
+                            color: color(mainColor);
+                            border: 1px solid color(mainColor);
+                        }
+                    }
+                }
+            }
+
+
+
+            .p-info-right {
+                grid-column: 2/4;
+                grid-row: 1/2;
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+                grid-template-rows:1fr;
+
+                .extra-imgs {
+                    max-height: 400px;
+                    overflow: scroll;
+                    grid-column: 1/2;
+
+                    .extra-img {
+                        max-height: 150px;
+                        max-width: 200px;
+                        margin-bottom: 1em;
+                        cursor: pointer;
+                        img {
+                            object-fit: cover;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+                .current-img {
+                    padding: 0 1em 1em 1em;
+                    grid-column: 2/3;
+                    img {
+                        border-radius: 10px;
+                        object-fit: cover;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+
+
+
+            .p-info-bottom {
+                grid-row: 2/3;
+                grid-column: 1/4;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr;
+                padding: 2em;
+
+                .p-info-bottom-list {
+                    grid-column: 1/2;
+
+                    li {
+                        list-style-type: disc;
+                        margin: 1em 0;
+                    }
+                }
+                .p-info-bottom-about-listing {
+                    grid-column: 2/3;
+
+                    h3 {
+                        font-size: 2em;
+                        margin-bottom: 1em;
+                    }
+                }
+            }
+        }
+    }
+
+}

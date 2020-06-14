@@ -1,0 +1,133 @@
+<div id="main-bg-header">
+    <img src="img/home-img.jpg" alt="">
+    <div class="main-bg-header-content">
+        <h2>TIME TO REBUILD YOUR LEGACY</h2>
+        <p>Call us today, and get your cash<br> offer your home</p>
+        <a href="#" class='header-content-btn'>Contact Us</a>
+    </div>
+</div>
+<main>
+
+    <div id="main-property-wrapper">
+        <div class="glide" style='overflow: hidden;'>
+            <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+                <% properties.forEach(property => { %>
+                    <li class="glide__slide">
+                        <div id="properties-section">
+                            <h2 id="properties-section-title">Properties</h2>
+                            <div id="property-listing">
+                                <img class='property-listing-img' src="img/prop.jpg" alt="living Room">
+                                <div class="property-listing-content">
+                                    <p class="price">$<%= property.price%><span class='price-discription'>FOR SALE</span></p>
+                                    <ul id="properties-detail">
+                                        <div>
+                                            <il><img class='house-icon' src="img/home-run.png" alt="house"></il>
+                                            <il class="bedInfo"><span><%= property.bed%></span>Beds</il>
+                                            <il class="bathInfo"><span><%= property.bath%></span>Baths</il>
+                                        </div>
+                                        <il class='square-feet'><%= property.footage%><span>ft<sup>2</sup></span></il>
+                                    </ul>
+                                    <ul class='btn-container'>
+                                        <li><button><a href='#contact-section'>Contact</a></button></li>
+                                        <li><button><a href="/properties">More</a></button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+               <% }); %>
+            </ul>
+            </div>
+
+            <div class="glide__arrows" data-glide-el="controls">
+                <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+                <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="about-section">
+        <h2>About</h2>
+        <p>Hello, we are Monica and Shawn, and we are on a mission to reach out and help as many distressed homeowners as possible. Over the years, we have become experts on educating and assisting homeowners through their foreclosure process. With all the constant changes from day to day occurring in the banking industry, you, the Homeowner, need someone you can trust to offer you open and honest advice to aid you in making the right decision at such a life-altering moment. The best part about our mission is our advice is 100% free to you as the homeowner. If you have any questions about your current situation and would like to speak with a local expert for friendly advice, please give us a call right away!</p>
+        <button id='about-tab'>Learn More</button>
+    </div>
+    <div id="contact-section">
+        <div>
+            <h2>Contact Us</h2>
+            <form action="mailto:nicholasdegrate@gmail.com" method="get">
+                <div class='form'>
+                    <div class="form-group">
+                        <label for="">Name</label>
+                        <input type="text" placeholder="enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Email</label>
+                        <input type="email" name="email" id="email" placeholder="enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Phone</label>
+                        <input type="tel" name="phone" id="phone">
+                    </div>
+                    <div class="form-group text-area">
+                        <label for="">How can we help?</label>
+                        <textarea name="text" id="" cols="5" rows="5"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Contact Us</button>
+                </div>
+            </form>
+        </div>
+        <div class="faq-section">
+            <h2>Frequently Asked<br> Questions</h2>
+            <ul>
+                <li>
+                    <div class="faq-btn">
+                        Who typically sells houses?
+                        <img src="img/plus.png">
+                    </div>
+                    <div class="panel">
+                        <p>People from all walks of life sell to us, but they all share one thing in common: They want to sell a house quickly, to a trusted home buyer who can make a cash offer and close on their schedule.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="faq-btn">Will you pay market value for my house?<img src="img/plus.png"></div>
+                    <div class="panel">
+                        <p>Our franchisees are, first and foremost, real estate investors.  Our franchisees invest time and money to renovate houses and make money once the house is back on the market.  After answering your question and evaluating the condition of your house, our local franchisee will make a fair, no-obligation cash offer that is based on the expected market value of your house after a full renovation, discounting the renovation time and costs.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="faq-btn">Do you buy condos and other types of homes?<img src="img/plus.png"></div>
+                    <div class="panel">
+                    <p>Yes. We buy condos, townhouses, duplexes, multi-tenant buildings, and even some commercial properties as well.</p>
+                    </div>
+                </li>
+                <li>
+
+                <div class="faq-btn">Do you charge a fee for visiting my house and making an offer?
+                    <img src="img/plus.png">
+                    </div>
+                    <div class="panel">
+                        <p>Absolutely not. We do this entirely at no charge.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="faq-btn">What should I fix before I sell my house?
+                    <img src="img/plus.png">
+                    </div>
+                    <div class="panel">
+                    <p>Nothing, if you’re selling to We Buy Ugly Houses. We can buy your house just the way it is, so you won’t have to repair anything or even sweep the floor.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="faq-btn">Can you answer more of my question?
+                    <img src="img/plus.png">
+                    </div>
+                    <div class="panel">
+                    <p>Of course! We’re always happy to answer any questions you might have about We Buy Ugly Houses. Just send us your question online or call us at 866-200-6475 to speak with us personally.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+<%- include('partials/footer.ejs') %>

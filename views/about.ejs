@@ -1,0 +1,13 @@
+<div id='main'>
+    <h2>About Us</h2>
+    <div class="about-us-container">
+        <% abouts.forEach((about) => { %>
+            <div class="about-us-container-content">
+                <img src= '<%= about.img %>' alt="">
+                <h1><%= about.title %></h1>
+                <p><%= about.para %></p>
+            </div>
+        <% }); %>
+    </div>
+</div>
+<%- include('partials/footer.ejs') %>

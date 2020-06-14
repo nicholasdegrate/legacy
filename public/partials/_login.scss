@@ -1,0 +1,94 @@
+// welcome screen
+#welcome {
+    min-height: calc(100vh - 200px - 14px);
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+
+    div {
+        h1 {
+            margin: 1em;
+            font-size: 2em;
+        }
+        a {
+            padding: .6em 4em;
+            border: 1px solid color(mainColor);
+
+            &:hover {
+                color: white;
+                transition: .5s;
+                background: color(accentOne);
+            }
+        }
+    }
+}
+
+// register screen
+#register {
+    min-height: calc(100vh - 200px - 14px);
+    width: 60%;
+    margin: 0 auto;
+    padding: 3em 1em;
+    div {
+        h1 {
+            text-align: center;
+            font-size: 2em;
+        }
+        form {
+            #register-btn {
+                width: 100%;
+                margin: 2em 0;
+            }
+        }
+    }
+}
+
+// message alert
+.box-msg {
+    height: 30px;
+    width: 80%;
+    margin: 1em auto;
+    padding: .5em;
+    background-color: #f0ad4e;
+    border: 1px solid #f0ad4e ;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+        .close-btn {
+            border: none;
+            height: 20px;
+            width: 20px;
+            background: white;
+            border-radius: 5px;
+
+            &:hover {
+                transition: none;
+                background-color: none;
+                color: color(mainColor);
+            }
+        }
+}
+
+// login screen
+#login-screen {
+    min-height: calc(100vh - 200px - 14px);
+    width: 60%;
+    margin: 0 auto;
+    padding: 3em 1em;
+    div {
+        h1 {
+            text-align: center;
+            font-size: 2em;
+        }
+        form {
+            #login-btn {
+                width: 100%;
+                margin: 2em 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+<div id="main-blog-wrapper">
+    <h2>Community News</h2>
+    <div id="blog-container">
+       <% article.forEach(art => { %>
+           <div>
+               <h3><%= art.title %></h3>
+               <p><%= art.text.substring(0, 200)  + '...'; %></p>
+               <a class='blog-link' href='/blog/article/<%=art._id%>'>Read More</a>
+           </div>
+       <% }); %>
+    </div>
+</div>
+<%- include('partials/footer.ejs') %>

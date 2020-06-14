@@ -1,0 +1,31 @@
+$colors: (
+    mainColor: #000,
+    accentOne: #1C3160,
+    accentTwo: #819B2B,
+    white: #fff,
+);
+
+$screen: (
+    mobile: 500px,
+    tablet: 750px,
+    desktop: 1200px,
+);
+
+@function color($key) {
+    @if map-has-key($colors, $key) {
+      @return map-get($colors, $key);
+    }
+
+    @warn "Unknown `#{$key}` in $colors.";
+    @return null;
+}
+
+
+@function screen($key) {
+    @if map-has-key($screen, $key) {
+      @return map-get($screen, $key);
+    }
+
+    @warn "Unknown `#{$key}` in $screen.";
+    @return null;
+}
