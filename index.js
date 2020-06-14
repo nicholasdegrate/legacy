@@ -10,8 +10,8 @@ const path = require('path');
 
 const app = express();
 
-//passport config
-require('./config/passport')(passport);
+// //passport config
+// require('./config/passport')(passport);
 
 // DB config
 const db = require('./config/keys').mongoURI;
@@ -42,39 +42,39 @@ app.set('view engine', 'ejs');
 // Express body parser
 app.use(express.urlencoded({ extended : true }));
 
-// Express session
-app.use(
-    session({
-      secret: process.env.SECRET,
-      resave: true,
-      saveUninitialized: true
-    })
-  );
+// // Express session
+// app.use(
+//     session({
+//       secret: process.env.SECRET,
+//       resave: true,
+//       saveUninitialized: true
+//     })
+//   );
 
-// Passport middleware
-app.use(passport.initialize());
-app.use(passport.session());
+// // Passport middleware
+// app.use(passport.initialize());
+// app.use(passport.session());
 
 // Connect Flash
-app.use(flash());
+// app.use(flash());
 
 
-// Global Variables
-app.use((req, res, next) => {
-    res.locals.success_msg = req.flash('success_msg');
-    res.locals.error_msg = req.flash('error_msg');
-    res.locals.error = req.flash('error');
-    next();
-});
+// // Global Variables
+// app.use((req, res, next) => {
+//     res.locals.success_msg = req.flash('success_msg');
+//     res.locals.error_msg = req.flash('error_msg');
+//     res.locals.error = req.flash('error');
+//     next();
+// });
 
 // Routes
   //home
 app.use('/', require('./routes/web'));
   //login system routes
-app.use('/welcome', require('./routes/app'));
-app.use('/users/', require('./routes/users'));
+// app.use('/welcome', require('./routes/app'));
+// app.use('/users/', require('./routes/users'));
   //blog
-app.use('/blog', require('./routes/blog'));
+// app.use('/blog', require('./routes/blog'));
   //properties
 app.use('/properties', require('./routes/properties'));
 

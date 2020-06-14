@@ -33,6 +33,7 @@ button {
     border: 1px solid #000;
     border-radius: 2px;
     cursor: pointer;
+   
 
     &:hover {
         background-color: color(accentTwo);
@@ -50,7 +51,7 @@ main {
 // properties listing
 #main-property-wrapper {
     max-width: 1400px;
-    height: 500px;
+    height: 550px;
     margin: 0 auto;
     position: relative;
 }
@@ -61,14 +62,9 @@ main {
     .swiper-wrapper {
         .swiper-slide {
             transition:  .3s linear;
-            transform: scale(.9);
+            transform: scale(.95);
             width: 100%;
             overflow: visible;
-            &--active {
-                opacity: 1;
-                filter: none;
-                transform:  scale(1);
-            }
         }
     }
 }
@@ -82,7 +78,7 @@ main {
     bottom: -1em;
 }
 .swiper-button-next,.swiper-button-prev {
-    color:#000;
+    color:#000 !important;
     outline: none;
 }
 // end swiper
@@ -120,6 +116,14 @@ main {
                     color: color(white);
                     border: blue;
 
+                    &:hover {
+                        background-color: color(white);
+                        color: color(mainColor);
+                        border: 1px solid color(mainColor);
+                    }
+                }
+                li:nth-child(2) button {
+                    background: transparent;
                     &:hover {
                         background-color: color(white);
                         color: color(mainColor);
@@ -209,7 +213,7 @@ main {
     margin: 0 auto 5em;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 20%;
+    grid-template-rows: 1fr 1fr;
     h2 {
         text-align: center;
     }
