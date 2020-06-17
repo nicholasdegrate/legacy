@@ -78,7 +78,7 @@ main {
     bottom: -1em;
 }
 .swiper-button-next,.swiper-button-prev {
-    color:#000 !important;
+    color:color(accentOne) !important;
     outline: none;
 }
 // end swiper
@@ -104,12 +104,16 @@ main {
 
             .btn-container {
                 height: 100px;
-                width: 90%;
+                width: 100%;
                 margin: 0 auto;
                 display: flex;
                 justify-content: space-evenly;
                 align-items: center;
                 border-radius: 90px;
+
+                li button {
+                    margin: 1em;
+                }
 
                 li:nth-child(1) button {
                     background-color: color(accentOne);
@@ -125,9 +129,9 @@ main {
                 li:nth-child(2) button {
                     background: transparent;
                     &:hover {
-                        background-color: color(white);
-                        color: color(mainColor);
-                        border: 1px solid color(mainColor);
+                        background-color: color(accentTwo);
+                        color: color(white);
+                        border: 1px solid color(accentTwo);
                     }
                 }
             }
@@ -199,6 +203,10 @@ main {
         border: 1px solid color(white);
         margin-top: 2em;
         color: color(mainColor);
+        &:hover {
+            color: color(white);
+            border: 1px solid color(accentTwo);
+        }
     }
 }
 

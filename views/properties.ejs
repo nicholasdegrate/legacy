@@ -42,7 +42,7 @@
     
     <!-- * add a index on the end of id to change object -->
     <% for(let i = 0;i < arr.length; i++) { %>
-            <div class='info propertiesInfo' id='<%=`info-product${arr[i]}` %>'>
+        <div class='info propertiesInfo' id='<%=`info-product${arr[i]}` %>'>
             <% properties.forEach(property => { %>
                 <!-- checks the index to see if it matches -->
                 <% if (properties.indexOf(property) == arr[i]) { %>

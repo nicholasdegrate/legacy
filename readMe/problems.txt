@@ -2,6 +2,8 @@
         
         optimalzing the website
 
+        %: definitly need to mini the files of css/js/img for better optimalzation
+
 ######### PROBLEM TWO ######### 
         
         figuring out where to store images for inputs
@@ -13,6 +15,24 @@
 ######### PROBLEM FOURTH ######### 
         
         !!!!! Fixing deployment code to make it production !!!!!
+
+        %: what was the problem?
+                I fixed the problem by checking the whitelsit in mongo atlas
+                also, the process.env where not configure to take in properties
+
+        @: problem is fixed
+
+
+######### PROBLEM FOURTH ######### 
+
+    $CURRENTLY WORKING ON
+        
+        slidejs does not working on chrome
+
+        %: currently swiper.js is working on all browser; however, 
+            safari is not working correctly
+
+        @: problem is fixed
 
 
 ######### PROBLEM FOURTH ######### 

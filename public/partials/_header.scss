@@ -97,7 +97,7 @@
     #mobile-nav-list {
         display: none;
         position: fixed;
-        z-index: 7;
+        z-index: 200;
         left: 0;
         top: 0;
         overflow: hidden;
@@ -118,20 +118,15 @@
 
             .exit {
                 position: absolute;
-                top: 5em;
-                right: 5em;
-                width: 10px;
-                .exit-line {
-                    height: 3px;
-                    width: 22px;
-                    background: color(mainColor);
-                }
-                .e-one {
-                    transform: rotate(130deg);
-                }
-                .e-two {
-                    transform: rotate(-130deg);
-                }
+                top: 5%;
+                right: 5%;
+                height: 30px;
+                width: 30px;
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -ms-transform: rotate(45deg); /* IE 9 */
+                transform: rotate(45deg);
+                cursor: pointer;
             }
 
             .mobile-links {

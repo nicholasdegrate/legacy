@@ -6,11 +6,10 @@ const router = express.Router();
 const Property = require('../models/property');
 
 router.get('/', (req, res) => {
-    
     // found all properties in the db
     Property.find({}, (err, properties) => {
         if (err) {
-            res.redirect('home');
+            console.log(err);
         } else {
              res.render('properties', {properties});
         }

@@ -48,3 +48,11 @@ function hamburger() {
         nav.style.display = 'block';
     }
 }
+// exit
+function exit() {
+    const nav = document.querySelector('#mobile-nav-list');
+    const exitBtn = document.querySelector('.exit');
+    exitBtn.addEventListener('click', function() {
+        nav.style.display = 'none';
+    });
+}
