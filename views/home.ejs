@@ -20,7 +20,6 @@
                                 <div id="property-listing">
                                     <img class='property-listing-img' src="img/prop.jpg" alt="living Room">
                                     <div class="property-listing-content">
-                                        <p class="price">$<%= property.price%><span class='price-discription'>FOR SALE</span></p>
                                         <ul id="properties-detail">
                                             <div>
                                                 <il><img class='house-icon' src="img/home-run.png" alt="house"></il>
@@ -31,7 +30,7 @@
                                         </ul>
                                         <ul class='btn-container'>
                                             <li><a href='#contact-section'><button>contact</button></a></li>
-                                            <li><a href="/properties"><button>More</button></a></li>
+                                            <!-- <li><a href="/properties"><button>More</button></a></li> -->
                                         </ul>
                                     </div>
                                 </div>
@@ -56,23 +55,23 @@
     <div id="contact-section">
         <div>
             <h2>Contact Us</h2>
-            <form action="mailto:nicholasdegrate@gmail.com" method="get">
+            <form action="/send" method="POST">
                 <div class='form'>
                     <div class="form-group">
                         <label for="">Name</label>
-                        <input type="text" placeholder="enter your name">
+                        <input type="text" name='fname' placeholder="enter your name" required>
                     </div>
                     <div class="form-group">
                         <label for="">Email</label>
-                        <input type="email" name="email" id="email" placeholder="enter your email">
+                        <input type="email" name="email" id="email" placeholder="enter your email" required>
                     </div>
                     <div class="form-group">
                         <label for="">Phone</label>
-                        <input type="tel" name="phone" id="phone">
+                        <input type="tel" name="phone" id="phone" required>
                     </div>
                     <div class="form-group text-area">
                         <label for="">How can we help?</label>
-                        <textarea name="text" id="" cols="5" rows="5"></textarea>
+                        <textarea name="text" id="" cols="5" rows="5" required></textarea>
                     </div>
                     <button type="submit" class="submit-btn">Contact Us</button>
                 </div>
@@ -93,7 +92,7 @@
                 <li>
                     <div class="faq-btn">Will you pay market value for my house?<img src="img/plus.png"></div>
                     <div class="panel">
-                        <p>Our franchisees are, first and foremost, real estate investors.  Our franchisees invest time and money to renovate houses and make money once the house is back on the market.  After answering your question and evaluating the condition of your house, our local franchisee will make a fair, no-obligation cash offer that is based on the expected market value of your house after a full renovation, discounting the renovation time and costs.</p>
+                        <p>Our company are, first and foremost, real estate investors.  Our company invest time and money to renovate houses and make money once the house is back on the market.  After answering your question and evaluating the condition of your house, our local company will make a fair, no-obligation cash offer that is based on the expected market value of your house after a full renovation, discounting the renovation time and costs.</p>
                     </div>
                 </li>
                 <li>
@@ -116,7 +115,7 @@
                     <img src="img/plus.png">
                     </div>
                     <div class="panel">
-                    <p>Nothing, if you’re selling to We Buy Ugly Houses. We can buy your house just the way it is, so you won’t have to repair anything or even sweep the floor.</p>
+                    <p>Nothing, if you’re selling to Legacy Rebuild Properties. We can buy your house just the way it is, so you won’t have to repair anything or even sweep the floor.</p>
                     </div>
                 </li>
                 <li>
@@ -124,7 +123,7 @@
                     <img src="img/plus.png">
                     </div>
                     <div class="panel">
-                    <p>Of course! We’re always happy to answer any questions you might have about We Buy Ugly Houses. Just send us your question online or call us at 866-200-6475 to speak with us personally.</p>
+                    <p>Of course! We’re always happy to answer any questions you might have about Legacy Rebuild Properties. Just send us your question online or call us at (817) 888-8285 to speak with us personally.</p>
                     </div>
                 </li>
             </ul>

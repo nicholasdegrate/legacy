@@ -8,6 +8,7 @@ const passport = require('passport');
 const session = require('express-session');
 const path = require('path');
 
+
 const app = express();
 
 //passport config
@@ -74,9 +75,9 @@ app.use('/', require('./routes/web'));
 app.use('/welcome', require('./routes/app'));
 app.use('/users/', require('./routes/users'));
   //blog
-app.use('/blog', require('./routes/blog'));
+// app.use('/blog', require('./routes/blog'));
   //properties
-app.use('/properties', require('./routes/properties'));
+// app.use('/properties', require('./routes/properties'));
 
 // listening to server
 app.listen(PORT, (err) => (err) ? console.log(err) : console.log(`listening on ${PORT}`));

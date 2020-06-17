@@ -14,9 +14,16 @@
         a{
             color : color(white);
         }
-        #company-name-footer {
-            font-size: 2em;
-            margin-bottom: 1em;
+        #company-social-link {
+            li {
+                height: 2em;
+                width: 2em ;
+                display: inline-block;
+                margin: 1rem;
+                img {
+                    object-fit: cover;
+                }
+            }
         }
         .nav-footer li {
             margin-bottom: .5em;
@@ -41,13 +48,6 @@
         grid-template-rows: 1fr;
         justify-content: space-evenly;
 
-
-        #company-name-footer {
-            grid-row: 1/2;
-            grid-column: 1/2;
-            margin: 0;
-            align-self: end;
-        }
         .nav-footer  {
             grid-row: 1/2;
             grid-column: 2/3;

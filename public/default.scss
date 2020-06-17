@@ -110,13 +110,18 @@ main {
                 justify-content: space-evenly;
                 align-items: center;
                 border-radius: 90px;
-
-                li button {
-                    margin: 1em;
+                li {
+                    width: 100%;
+                }
+                li a {
+                    width: 100%;
+                }
+                li a button {
+                    width: 100%;
                 }
 
                 li:nth-child(1) button {
-                    background-color: color(accentOne);
+                    background-color: color(accentTwo);
                     color: color(white);
                     border: blue;
 
@@ -126,14 +131,14 @@ main {
                         border: 1px solid color(mainColor);
                     }
                 }
-                li:nth-child(2) button {
-                    background: transparent;
-                    &:hover {
-                        background-color: color(accentTwo);
-                        color: color(white);
-                        border: 1px solid color(accentTwo);
-                    }
-                }
+                // li:nth-child(2) button {
+                //     background: transparent;
+                //     &:hover {
+                //         background-color: color(accentTwo);
+                //         color: color(white);
+                //         border: 1px solid color(accentTwo);
+                //     }
+                // }
             }
         }
 

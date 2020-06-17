@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-
+const nodemailer = require('nodemailer');
 // Load property Model
 const Property = require('../models/property');
 const Article = require('../models/article');
@@ -15,6 +15,49 @@ router.get('/', (req,res) => {
         }
     });
 });
+
+//nodemailer
+router.post('/send', (req,res) => {
+    const output = `
+      <p>You have a new contact request</p>
+      <h3>Contact Details</h3>
+      <ul>
+        <li>Name: ${req.body.fname}</li>
+        <li>Email: ${req.body.email}</li>
+        <li>Phone: ${req.body.phone}</li>
+      </ul>
+      <h3>Message</h3>
+      <p>${req.body.text}</p>
+    `;
+    async function main() {
+    
+      // create reusable transporter object using the default SMTP transport
+      let transporter = nodemailer.createTransport({
+        host: "smtp.gmail.com",
+        port: 587,
+        secure: true, // true for 465, false for other ports
+        auth: {
+          user: 'legacyrebuildproperties@gmail.com', // generated ethereal user
+          pass: process.env.GMAIL_PASS, // generated ethereal password
+        },
+      });
+    
+      // send mail with defined transport object
+      let info = await transporter.sendMail({  
+        from: `${req.body.fname} <${req.body.email}>`, // sender address
+        to: "legacyrebuildproperties@gmail.com", // list of receivers
+        subject: `New Client ${req.body.fname}`, // Subject line
+        html: output, // html body
+      });
+    
+      console.log("Message sent: %s", info.messageId);
+      console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+  
+      res.redirect('/');
+    }
+    
+    main().catch(console.error);
+  });
 
 // about routes
 router.get('/about', (req, res) => {
