@@ -18,7 +18,7 @@ require('./config/passport')(passport);
 const db = require('./config/keys').mongoURI;
 
 // defining port
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 
 // STATIC info
 app.use(express.static(path.join(__dirname, 'public')));
