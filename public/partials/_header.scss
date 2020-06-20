@@ -54,12 +54,8 @@
     position: relative;
 
     #company-name {
+        text-transform: uppercase;
         margin-left: -.5em;
-        height: 100%;
-        width: 20%;
-        img {
-            object-fit: cover;
-        }
     }
     span.legacy-title {
         color: color(accentOne);
