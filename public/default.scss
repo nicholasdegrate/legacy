@@ -1,6 +1,6 @@
 //  defualt settings
 @import 'partials/config';
-
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Quicksand:wght@300;400;500;600;700&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -8,6 +8,7 @@
 }
 body {
     margin: 0 auto;
+    font-family: 'Cabin', sans-serif;
 }
 li {
     list-style-type: none;
@@ -75,7 +76,7 @@ main {
     right: 0; 
     margin-left: auto; 
     margin-right: auto; 
-    bottom: -1em;
+    bottom: -.1em;
 }
 .swiper-button-next,.swiper-button-prev {
     color:color(accentOne) !important;
@@ -208,6 +209,7 @@ main {
         border: 1px solid color(white);
         margin-top: 2em;
         color: color(mainColor);
+        background-color: rgb(255,255,255);
         &:hover {
             color: color(white);
             border: 1px solid color(accentTwo);
@@ -282,12 +284,20 @@ main {
         max-width: 450px;
         margin:1em auto;
         h2 {
+            color: color(accentTwo);
             margin-bottom: 1em;
         }
         .faq-btn {
-            img {
+            p {
                 margin-left: 2em;
+                font-size: 2em;
+                font-weight: 200;
+                font-family: 'Quicksand', sans-serif;
             }
+        }
+        .caution {
+            margin-top: 1em;
+            color: red;
         }
     }
 

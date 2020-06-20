@@ -54,8 +54,12 @@
     position: relative;
 
     #company-name {
-        text-transform: uppercase;
         margin-left: -.5em;
+        height: 100%;
+        width: 20%;
+        img {
+            object-fit: cover;
+        }
     }
     span.legacy-title {
         color: color(accentOne);
@@ -74,14 +78,15 @@
 
 
     #hamburger {
-        width: 10px;
+        height: 1em;
+        width: 100%;
         cursor: pointer;
 
 
 
         .line {
             background-color: color(mainColor);
-            height: 2px;
+            height: 3px;
             width: 22px;
             margin-top: 3px;
             cursor: pointer;
@@ -120,13 +125,12 @@
                 position: absolute;
                 top: 5%;
                 right: 5%;
-                height: 30px;
-                width: 30px;
-                -webkit-transform: rotate(45deg);
-                -moz-transform: rotate(45deg);
-                -ms-transform: rotate(45deg); /* IE 9 */
-                transform: rotate(45deg);
+                height: 1.5em;
+                width: 1em;
                 cursor: pointer;
+                font-size: 2.3em;
+                font-family: 'Quicksand', sans-serif;
+                font-weight: 200;
             }
 
             .mobile-links {
