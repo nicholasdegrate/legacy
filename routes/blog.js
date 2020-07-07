@@ -1,11 +1,5 @@
 const express = require('express');
 const router = express.Router();
-const mongoose = require('mongoose');
-const crypto = require('crypto');
-const multer = require('multer');
-const gridFsStorage = require('multer-gridfs-storage');
-const gridFsStream = require('gridfs-stream');
-const methodOverride = require('method-override');
 
 // Load Blog Model
 const Article = require('../models/article');

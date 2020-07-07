@@ -43,10 +43,10 @@ button {
     }
 }
 
-// homepage
-main {
-    min-height: calc(80vh - 211px - 58px);
-}
+// // homepage
+// main {
+//     min-height: calc(80vh - 211px - 58px);
+// }
 
 // properties listing
 #main-property-wrapper {
@@ -191,7 +191,7 @@ main {
 #about-section {
     width: 100%;
     max-width: 1400px;
-    margin: 5em auto 10em;
+    margin: 0em auto 10em;
     padding: 1.5em;
     text-align: center;
     color: color(white);
